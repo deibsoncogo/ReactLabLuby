@@ -1,9 +1,2 @@
-# Titulo do repositório
-Descrição do repositório
-
-## Ajustes ao repositório atual
-[] Renomear titulo e descrição
-[] Criar estes arquivos
-    * package.json
-    * .env
-    * notes.md
+# React - Lab Luby
+Criação do primeiro projeto com o React
