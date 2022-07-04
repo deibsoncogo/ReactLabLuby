@@ -7,3 +7,6 @@ DS_Store
 **.env
 **.txt
 notes.md
+.pnp
+.pnp.js
+.DS_Store
