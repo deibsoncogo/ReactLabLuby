@@ -1,3 +1,4 @@
+import React from 'react'
 import { Card } from './Card'
 import { ExpenseDate } from './ExpenseDate'
 import './ExpenseItem.css'
@@ -5,7 +6,7 @@ import './ExpenseItem.css'
 export function ExpenseItem(props) {
   return (
     <Card className='expense-item'>
-      <ExpenseDate date={props.date}/>
+      <ExpenseDate date={props.date} />
 
       <div className='expense-item-description'>
         <h2>{props.title}</h2>
