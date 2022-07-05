@@ -10,16 +10,16 @@ export const App = () => {
     { id: 'e4', title: 'New Desk (Wooden)', amount: 450.00, date: new Date(2021, 5, 12) },
   ]
 
-  // return React.createElement('div', {},
-  //   React.createElement('h2', {}, 'Lets get started'),
-  //   React.createElement(Expenses, { items: expenses }),
-  // )
+  const addExpenseHandler = (expense) => {
+    console.log('In App.js')
+    console.log(expenses)
+  }
 
   return (
     <div>
       <h2>Let's get started</h2>
 
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
   )
