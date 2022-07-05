@@ -1,6 +1,6 @@
 import './Card.css'
 
-export function Card(props) {
+export const Card = (props) => {
   const classes = 'card ' + props.className
 
   return (
