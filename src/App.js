@@ -22,5 +22,5 @@ export const App = () => {
       <NewExpense />
       <Expenses items={expenses} />
     </div>
-  );
+  )
 }
