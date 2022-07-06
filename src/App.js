@@ -1,6 +1,6 @@
 import React from 'react'
 import { Expenses } from './components/expense/Expenses'
-import { NewExpense } from './components/newExpense/newExpense'
+import { NewExpense } from './components/newExpense/NewExpense'
 
 export const App = () => {
   const expenses = [
