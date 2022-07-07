@@ -46,6 +46,7 @@ export const ExpenseFrom = (props) => {
       </div>
 
       <div className='new-expense-actions'>
+        <button type='button' onClick={props.onCancel}>Cancel</button>
         <button type='submit'>Add expense</button>
       </div>
     </form>
