@@ -1,5 +1,5 @@
-# React - Lab Luby
-Criação do primeiro projeto com o React
+# React Projeto Inicial - Lab Luby
+Criação do projeto inicial com o React
 
 ## Getting Started with Create React App
 
