@@ -1,7 +1,18 @@
 {
-  "name": "react-complete-guide",
-  "version": "0.1.0",
+  "name": "reactlabluby",
+  "version": "1.0.0",
+  "description": "Criação do primeiro projeto com o React",
+  "main": "index.js",
+  "repository": "git@github.com:deibsoncogo/ReactLabLuby.git",
+  "author": "Deibson Cogo <deibsoncogo@outlook.com>",
+  "license": "MIT",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
@@ -10,12 +21,6 @@
     "react-dom": "^18.0.0",
     "react-scripts": "4.0.1",
     "web-vitals": "^0.2.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

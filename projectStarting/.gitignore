@@ -1,0 +1,12 @@
+dist
+build
+coverage
+node_modules
+DS_Store
+**.log
+**.env
+**.txt
+notes.md
+.pnp
+.pnp.js
+.DS_Store
