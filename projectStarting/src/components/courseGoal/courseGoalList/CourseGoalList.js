@@ -1,11 +1,10 @@
-import React from 'react';
+import React from 'react'
+import { CourseGoalItem } from '../courseGoalItem/CourseGoalItem'
+import './CourseGoalList.css'
 
-import CourseGoalItem from '../CourseGoalItem/CourseGoalItem';
-import './CourseGoalList.css';
-
-const CourseGoalList = props => {
+export const CourseGoalList = (props) => {
   return (
-    <ul className="goal-list">
+    <ul className='goal-list'>
       {props.items.map(goal => (
         <CourseGoalItem
           key={goal.id}
@@ -16,7 +15,5 @@ const CourseGoalList = props => {
         </CourseGoalItem>
       ))}
     </ul>
-  );
-};
-
-export default CourseGoalList;
+  )
+}
