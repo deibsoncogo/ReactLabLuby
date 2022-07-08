@@ -1,7 +1,7 @@
 {
-  "name": "reactlablubyprojectinitial",
+  "name": "reactlablubyprimeiroprojeto",
   "version": "1.0.0",
-  "description": "Criação do projeto inicial com o React",
+  "description": "Criação do primeiro projeto com o React",
   "main": "index.js",
   "repository": "git@github.com:deibsoncogo/ReactLabLuby.git",
   "author": "Deibson Cogo <deibsoncogo@outlook.com>",
