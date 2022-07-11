@@ -1,0 +1,14 @@
+import React from 'react'
+import style from './button.module.css'
+
+export const Button = (props) => {
+    return (
+      <button
+        className={style.button}
+        type={props.type || 'button'}
+        onCLick={props.onClick}
+      >
+        {props.children}
+      </button>
+    )
+}
