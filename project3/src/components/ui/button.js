@@ -6,7 +6,7 @@ export const Button = (props) => {
       <button
         className={style.button}
         type={props.type || 'button'}
-        onCLick={props.onClick}
+        onClick={props.onClick}
       >
         {props.children}
       </button>
