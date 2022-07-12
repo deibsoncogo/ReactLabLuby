@@ -42,10 +42,7 @@ export const Login = (props) => {
 
   useEffect(() => {
     console.log('Effect running')
-
-    return () => {
-      console.log('Effect cleanup')
-    }
+    return () => { console.log('Effect cleanup') }
   }, [])
 
   const { isValid: emailIsValid } = emailState
