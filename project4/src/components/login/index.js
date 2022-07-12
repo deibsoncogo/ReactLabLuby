@@ -1,7 +1,8 @@
-import React, { useEffect, useReducer, useState } from 'react'
+import React, { useContext, useEffect, useReducer, useState } from 'react'
 import { Card } from '../ui/card'
 import { Button } from '../ui/button'
 import style from './style.module.css'
+import { AuthContext } from '../../store/authContext'
 
 const emailReducer = ((state, action) => {
   if (action.type === 'userInput') {
@@ -36,6 +37,8 @@ export const Login = (props) => {
 
   const [emailState, dispatchEmail] = useReducer(emailReducer, { value: '', isValid: null })
   const [passwordState, dispatchPassword] = useReducer(passwordReducer, { value: '', isValid: null })
+
+  const authCtx = useContext(AuthContext)
 
   useEffect(() => {
     console.log('Effect running')
@@ -86,7 +89,7 @@ export const Login = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault()
-    props.onLogin(emailState.value, passwordState.value)
+    authCtx.onLogin(emailState.value, passwordState.value)
   }
 
   return (
