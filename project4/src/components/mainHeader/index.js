@@ -6,7 +6,7 @@ export const MainHeader = (props) => {
   return (
     <header className={style['main-header']}>
       <h1>A Typical Page</h1>
-      <Navigation onLogout={props.onLogout} />
+      <Navigation />
     </header>
   )
 }
