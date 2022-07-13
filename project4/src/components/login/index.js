@@ -3,6 +3,7 @@ import { Card } from '../ui/card'
 import { Button } from '../ui/button'
 import style from './style.module.css'
 import { AuthContext } from '../../store/authContext'
+import { Input } from '../ui/input'
 
 const emailReducer = ((state, action) => {
   if (action.type === 'userInput') {
@@ -54,7 +55,7 @@ export const Login = (props) => {
       setFormIsValid(emailIsValid && passwordIsValid)
     }, 500)
 
-    return ()  => {
+    return () => {
       console.log('Cleanup')
       clearTimeout(identifier)
     }
@@ -92,32 +93,26 @@ export const Login = (props) => {
   return (
     <Card className={style.login}>
       <form onSubmit={submitHandler}>
-        <div
-          className={`${style.control} ${emailState.isValid === false ? style.invalid : ''
-            }`}
-        >
-          <label htmlFor='email'>E-Mail</label>
-          <input
-            type='email'
-            id='email'
-            value={emailState.value}
-            onChange={emailChangeHandler}
-            onBlur={validateEmailHandler}
-          />
-        </div>
-        <div
-          className={`${style.control} ${passwordState.isValid === false ? style.invalid : ''
-            }`}
-        >
-          <label htmlFor='password'>Password</label>
-          <input
-            type='password'
-            id='password'
-            value={passwordState.value}
-            onChange={passwordChangeHandler}
-            onBlur={validatePasswordHandler}
-          />
-        </div>
+        <Input
+          id='email'
+          label='E-mail'
+          type='email'
+          isValid={emailIsValid}
+          value={emailState.value}
+          onChange={emailChangeHandler}
+          onBlur={validateEmailHandler}
+        />
+
+        <Input
+          id='password'
+          label='Password'
+          type='password'
+          isValid={passwordIsValid}
+          value={passwordState.value}
+          onChange={passwordChangeHandler}
+          onBlur={validatePasswordHandler}
+        />
+
         <div className={style.actions}>
           <Button type='submit' className={style.btn} disabled={!formIsValid}>
             Login
