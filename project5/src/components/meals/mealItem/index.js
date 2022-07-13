@@ -1,3 +1,4 @@
+import { MealItemForm } from '../mealItemForm'
 import style from './style.module.css'
 
 export const MealItem = (props) => {
@@ -12,7 +13,7 @@ export const MealItem = (props) => {
       </div>
 
       <div>
-
+        <MealItemForm />
       </div>
     </li>
   )
