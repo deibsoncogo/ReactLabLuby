@@ -15,7 +15,7 @@ export const CartItem = (props) => {
       </div>
 
       <div className={style.actions}>
-        <button onClick={props.onRemove}>−</button>
+        <button onClick={props.onRemove}>-</button>
         <button onClick={props.onAdd}>+</button>
       </div>
     </li>

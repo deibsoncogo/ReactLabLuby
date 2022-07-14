@@ -15,7 +15,7 @@ export const Cart = (props) => {
   }
 
   const cartItemAddHandler = (item) => {
-    cartCtx.addItem(item)
+    cartCtx.addItem({ ...item, amount: 1 })
   }
 
   const cartItems = (
@@ -27,7 +27,7 @@ export const Cart = (props) => {
           amount={item.amount}
           price={item.price}
           onRemove={cartItemRemoveHandler.bind(null, item.id)}
-          onAdd={cartItemAddHandler(null, item)}
+          onAdd={cartItemAddHandler.bind(null, item)}
         />
       ))}
     </ul>
