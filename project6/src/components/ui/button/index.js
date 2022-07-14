@@ -1,7 +1,9 @@
 import React from 'react'
 import style from './style.module.css'
 
-export const Button = (props) => {
+export const Button = React.memo((props) => {
+  console.log('Button RUNNING')
+
   return (
     <button
       type={props.type || 'button'}
@@ -12,4 +14,4 @@ export const Button = (props) => {
       {props.children}
     </button>
   )
-}
+})
