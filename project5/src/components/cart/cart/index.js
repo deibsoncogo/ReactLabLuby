@@ -11,7 +11,7 @@ export const Cart = (props) => {
   )
 
   return (
-    <Modal>
+    <Modal onClose={props.onClose}>
       {cartItems}
 
       <div className={style.total}>
@@ -20,7 +20,7 @@ export const Cart = (props) => {
       </div>
 
       <div className={style.actions}>
-        <button className={style['button-alt']}>Close</button>
+        <button className={style['button-alt']} onClick={props.onClose}>Close</button>
         <button className={style.button}>Order</button>
       </div>
     </Modal>
