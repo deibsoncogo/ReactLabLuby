@@ -24,7 +24,7 @@ export const CartProvider = (props) => {
     dispatchCartAction({ type: 'remove', item })
   }
 
-  const CartContext = {
+  const cartContext = {
     items: cartState.items,
     totalAmount: cartState.totalAmount,
     addItem: addItemToCartHandler,
@@ -32,7 +32,7 @@ export const CartProvider = (props) => {
   }
 
   return (
-    <CartContext.Provider value={CartContext}>
+    <CartContext.Provider value={cartContext}>
       {props.children}
     </CartContext.Provider>
   )
