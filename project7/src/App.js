@@ -1,11 +1,9 @@
-import Users from './components/Users';
+import { Users } from './components/Users'
 
-function App() {
+export function App() {
   return (
     <div>
       <Users />
     </div>
-  );
+  )
 }
-
-export default App;
