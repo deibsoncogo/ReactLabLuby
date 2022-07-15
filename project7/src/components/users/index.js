@@ -5,10 +5,7 @@ import style from './style.module.css'
 export class Users extends Component {
   constructor() {
     super()
-    this.state = {
-      showUsers: true,
-      more: 'Test'
-    }
+    this.state = { showUsers: true, more: 'Test' }
   }
 
   toggleUsersHandler() {
