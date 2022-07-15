@@ -1,4 +1,4 @@
-import style from './User.module.css'
+import style from './style.module.css'
 
 export const User = (props) => {
   return (

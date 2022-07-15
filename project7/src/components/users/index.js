@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { User } from './User'
-import style from './Users.module.css'
+import { User } from '../user'
+import style from './style.module.css'
 
 const DUMMY_USERS = [
   { id: 'u1', name: 'Max' },
