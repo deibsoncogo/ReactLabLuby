@@ -1,9 +1,9 @@
-import { Users } from './components/users'
+import { UserFinder } from './components/userFinder'
 
 export function App() {
   return (
     <div>
-      <Users />
+      <UserFinder />
     </div>
   )
 }
