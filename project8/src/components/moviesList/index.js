@@ -1,11 +1,10 @@
-import React from 'react';
+import React from 'react'
+import { Movie } from '../movie'
+import style from './style.module.css'
 
-import Movie from './Movie';
-import classes from './MoviesList.module.css';
-
-const MovieList = (props) => {
+export const MoviesList = (props) => {
   return (
-    <ul className={classes['movies-list']}>
+    <ul className={style['movies-list']}>
       {props.movies.map((movie) => (
         <Movie
           key={movie.id}
@@ -15,7 +14,5 @@ const MovieList = (props) => {
         />
       ))}
     </ul>
-  );
-};
-
-export default MovieList;
+  )
+}

@@ -1,9 +1,8 @@
-import React from 'react';
+import React from 'react'
+import { MoviesList } from './components/moviesList'
+import './app.css'
 
-import MoviesList from './components/MoviesList';
-import './App.css';
-
-function App() {
+export function App() {
   const dummyMovies = [
     {
       id: 1,
@@ -17,18 +16,17 @@ function App() {
       openingText: 'This is the second opening text of the movie',
       releaseDate: '2021-05-19',
     },
-  ];
+  ]
 
   return (
     <React.Fragment>
       <section>
         <button>Fetch Movies</button>
       </section>
+
       <section>
         <MoviesList movies={dummyMovies} />
       </section>
     </React.Fragment>
-  );
+  )
 }
-
-export default App;
