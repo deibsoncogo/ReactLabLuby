@@ -1,27 +1,35 @@
-import { useState } from 'react'
+import { useReducer } from 'react'
+
+const initialInputState = { value: '', isTouched: false }
+
+const inputStateReducer = (state, action) => {
+  if (action.type === 'input') {
+    return { value: action.value, isTouched: state.isTouched }
+  }
+
+  if (action.type === 'blur') {
+    return { value: state.value, isTouched: true }
+  }
+
+  if (action.type === 'reset') {
+    return { value: '', isTouched: false }
+  }
+
+  return inputStateReducer
+}
 
 export const useInput = (validateValue) => {
-  const [enteredValue, setEnteredValue] = useState('')
-  const [isTouched, setIsTouched] = useState(false)
+  const [inputState, dispatch] = useReducer(inputStateReducer, initialInputState)
 
-  const valueIsValid = validateValue(enteredValue)
-  const hasError = !valueIsValid && isTouched
+  const valueIsValid = validateValue(inputState.value)
+  const hasError = !valueIsValid && inputState.isTouched
 
-  const valueChangeHandler = (event) => {
-    setEnteredValue(event.target.value)
-  }
-
-  const inputBlurHandler = () => {
-    setIsTouched(true)
-  }
-
-  const reset = () => {
-    setEnteredValue('')
-    setIsTouched(false)
-  }
+  const valueChangeHandler = (event) => { dispatch({ type: 'input', value: event.target.value }) }
+  const inputBlurHandler = () => { dispatch({ type: 'blur' }) }
+  const reset = () => { dispatch({ type: 'reset' }) }
 
   return {
-    value: enteredValue,
+    value: inputState.value,
     isValid: valueIsValid,
     hasError,
     valueChangeHandler,
