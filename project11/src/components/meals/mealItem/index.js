@@ -8,13 +8,8 @@ export const MealItem = (props) => {
 
   const price = `$${props.price.toFixed(2)}`
 
-  const addToCartHandler = amount => {
-    cartCtx.addItem({
-      id: props.id,
-      name: props.name,
-      amount: amount,
-      price: props.price
-    })
+  const addToCartHandler = (amount) => {
+    cartCtx.addItem({ id: props.id, name: props.name, amount: amount, price: props.price })
   }
 
   return (
@@ -26,7 +21,7 @@ export const MealItem = (props) => {
       </div>
 
       <div>
-        <MealItemForm onAddToCart={addToCartHandler} />
+        <MealItemForm id={props.id} onAddToCart={addToCartHandler} />
       </div>
     </li>
   )

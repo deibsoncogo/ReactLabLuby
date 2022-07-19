@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { Cart } from './components/cart'
+import { Cart } from './components/cart/cart'
 import { Header } from './components/layout/header'
-import { Meals } from './components/meals'
+import { Meals } from './components/meals/meals'
 import { CartProvider } from './store/cartProvider'
 
 export function App() {

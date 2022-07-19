@@ -1,7 +1,7 @@
 import { useContext } from 'react'
-import { CartContext } from '../../store/cartContext'
-import { Modal } from '../ui/modal'
-import { CartItem } from './cartItem'
+import { CartContext } from '../../../store/cartContext'
+import { Modal } from '../../ui/modal'
+import { CartItem } from '../cartItem'
 import style from './style.module.css'
 
 export const Cart = (props) => {
@@ -15,7 +15,7 @@ export const Cart = (props) => {
   }
 
   const cartItemAddHandler = (item) => {
-    cartCtx.addItem(item)
+    cartCtx.addItem({ ...item, amount: 1 })
   }
 
   const cartItems = (
@@ -36,16 +36,14 @@ export const Cart = (props) => {
   return (
     <Modal onClose={props.onClose}>
       {cartItems}
+
       <div className={style.total}>
-        <span>Total Amount</span>
+        <span>Total amount</span>
         <span>{totalAmount}</span>
       </div>
 
       <div className={style.actions}>
-        <button className={style['button--alt']} onClick={props.onClose}>
-          Close
-        </button>
-
+        <button className={style['button-alt']} onClick={props.onClose}>Close</button>
         {hasItems && <button className={style.button}>Order</button>}
       </div>
     </Modal>

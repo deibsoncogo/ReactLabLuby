@@ -1,6 +1,11 @@
 {
-  "name": "react-complete-guide",
-  "version": "0.1.0",
+  "name": "reactlablubyquintoprojeto",
+  "version": "1.0.0",
+  "description": "Criação do quinto projeto com o React",
+  "main": "index.js",
+  "repository": "git@github.com:deibsoncogo/ReactLabLuby.git",
+  "author": "Deibson Cogo <deibsoncogo@outlook.com>",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "start": "react-scripts start",
