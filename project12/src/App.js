@@ -1,10 +1,7 @@
-import Counter from './components/Counter';
+import {Counter} from './components/counter'
 
-
-function App() {
+export function App() {
   return (
     <Counter />
-  );
+  )
 }
-
-export default App;
