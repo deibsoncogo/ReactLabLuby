@@ -1,7 +1,7 @@
 import style from './style.module.css'
 
 export const CartItem = (props) => {
-  const price = `$${props.price.toFixed(2)}`
+  const price = `$ ${props.price.toFixed(2)}`
 
   return (
     <li className={style['cart-item']}>
