@@ -5,6 +5,7 @@ import style from './style.module.css'
 
 export const AvailableMeals = () => {
   const [meals, setMeals] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     const fetchMeals = async () => {
@@ -23,10 +24,19 @@ export const AvailableMeals = () => {
       }
 
       setMeals(loadedMeals)
+      setIsLoading(false)
     }
 
     fetchMeals()
   }, [])
+
+  if (isLoading) {
+    return (
+      <section className={style.mealsLoading}>
+        <p>Loading...</p>
+      </section>
+    )
+  }
 
   const mealsList = meals.map((meal) => (
     <MealItem
