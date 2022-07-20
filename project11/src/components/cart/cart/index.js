@@ -7,7 +7,7 @@ import style from './style.module.css'
 export const Cart = (props) => {
   const cartCtx = useContext(CartContext)
 
-  const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`
+  const totalAmount = `$ ${cartCtx.totalAmount.toFixed(2)}`
   const hasItems = cartCtx.items.length > 0
 
   const cartItemRemoveHandler = (id) => {
@@ -43,7 +43,10 @@ export const Cart = (props) => {
       </div>
 
       <div className={style.actions}>
-        <button className={style['button-alt']} onClick={props.onClose}>Close</button>
+        <button className={style['button-alt']} onClick={props.onClose}>
+          Close
+        </button>
+
         {hasItems && <button className={style.button}>Order</button>}
       </div>
     </Modal>
