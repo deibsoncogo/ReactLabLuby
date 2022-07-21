@@ -5,8 +5,8 @@ import style from './style.module.css'
 
 export const Counter = () => {
   const dispatch = useDispatch()
-  const counter = useSelector((state) => { return state.counter })
-  const show = useSelector((state) => { return state.showCounter })
+  const counter = useSelector((state) => { return state.counter.value })
+  const show = useSelector((state) => { return state.counter.showCounter })
 
   const incrementHandler = () => { return dispatch(counterActions.increment()) }
   const increaseHandler = () => { return dispatch(counterActions.increase(10)) }
