@@ -14,8 +14,8 @@ const uiSlice = createSlice({
         title: action.payload.title,
         message: action.payload.message,
       }
-    }
-  }
+    },
+  },
 })
 
 export const uiActions = uiSlice.actions
